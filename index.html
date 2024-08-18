@@ -10,14 +10,17 @@
 </head>
 <body>
     <header>
-        <a href="#" class="logo">Athil</a>
+        <a href="#" class="logo">Welcome!</a>
 
         <nav>
-            <a href="#" class="active"> Home</a>
-            <a href="#" >Resources</a>
-            <a href="#" >Projects</a>
-            <a href="#" >Contact</a>
+            <a href="index.html" id="home">Home</a>
+            <a href="resources.html" id="resources">Resources</a>
+            <a href="teaching.html" id="teaching">Teaching</a>
+            <a href="projects.html" id="projects">Projects</a>
+            <a href="contact_form.html" id="contact">Contact</a>
         </nav>
+
+      
     </header>
     <section class="home">
         <div class="home-img">
@@ -27,11 +30,23 @@
             <h1>Hi, It's <span>Athil</span></h1>
             <h3 class="typing-text">I'm an Aerospace Engineer</h3>
             <div class="social-icons">
-                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="#"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/athil-george-891063163/"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/athilp"><i class="fa-brands fa-github"></i></a>
             </div>
-            <a href="Portfolio_APG.pdf"class="btn">Portfolio</a>
+            <a href="Resume_PortfolioWebsite.pdf"class="btn">Download CV/Resume</a>
         </div>
     </section>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentPage = window.location.pathname.split('/').pop();
+            const navLinks = document.querySelectorAll('nav a');
+            
+            navLinks.forEach(link => {
+                if (link.getAttribute('href') === currentPage) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
 </body>
 </html>

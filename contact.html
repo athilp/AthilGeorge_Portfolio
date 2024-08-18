@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Contact</title>
+</head>
+<body>
+    <header>
+        
+        <nav>
+            <a href="index.html" id="home">Home</a>
+            <a href="#" id="resources">Resources</a>
+            <a href="#" id="projects">Projects</a>
+            <a href="contact.html" id="contact">Contact</a>
+        </nav>
+        
+    </header>
+    <div class="contact">
+        <h1>Phone: (+1) 425 492-5473</h1>
+        <h3> Email: athilgeorge@gmail.com</h3>
+    </div>
+   
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentPage = window.location.pathname.split('/').pop();
+            const navLinks = document.querySelectorAll('nav a');
+            
+            navLinks.forEach(link => {
+                if (link.getAttribute('href') === currentPage) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
